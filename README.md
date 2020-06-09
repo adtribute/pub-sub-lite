@@ -1,7 +1,3 @@
-# npvn:pub-sub-lite
-
-Lighter (Method-based) pub/sub for Meteor.
-
 # Intro
 
 Meteor publications are very resource-intensive by nature. For every subscribed
@@ -428,6 +424,11 @@ Meteor.subscribeLite('authorsAndTheirBooks', function() {
 });
 ```
 
+### `ValidatedMethod`
+
+To use *pub-sub-lite* with `ValidatedMethod`, replace `mdg:validated-method`
+with `npvn:validated-method`. More information can be found [here][validated-method-link].
+
 ### Requirements for MongoDB Change Streams
 
 The package uses MongoDB Change Streams to detect changes in update operations.
@@ -461,3 +462,5 @@ replica set.
 [session-collection-view-link]: https://github.com/meteor/meteor/blob/devel/packages/ddp-server/livedata_server.js#L106-L117
 
 [publish-composite-link]: https://atmospherejs.com/reywood/publish-composite
+
+[validated-method-link]: https://github.com/adtribute/validated-method
