@@ -499,7 +499,7 @@ Notes:
   replica set.
 - You will see warnings in the server console if these requirements are not met.
 
-### The **PubSubLite**updateOperationId field
+### The `__PubSubLite__updateOperationId` field
 
 During update operations, enhanced Methods set an additional field on the
 affected document(s) to keep track of what changes were triggered from what
