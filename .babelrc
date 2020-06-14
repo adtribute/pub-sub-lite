@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    [
+      "babel-plugin-rewire-exports",
+      {
+        "unsafeConst": true
+      }
+    ]
+  ]
+}
