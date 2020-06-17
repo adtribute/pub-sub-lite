@@ -38,14 +38,14 @@ However, using Method calls for fetching data has certain disadvantages:
 
 The _pub-sub-lite_ package aims to solve these problems by providing:
 
-- Easy-to-use helpers (`Meteor.publishLite` and `Meteor.subscribeLite`) that can
-  be used in place of `Meteor.publish` and `Meteor.subscribe`. No other change
-  is necessary. The original pub/sub will be converted to a Method call and the
-  result data will be merged to Minimongo automatically. `Meteor.subscribeLite`
-  also provides a handle that reactively returns `true` once data has arrived,
-  which means existing front-end code can be kept intact!
+- **Easy-to-use helpers** (`Meteor.publishLite` and `Meteor.subscribeLite`) that
+  can be used in place of `Meteor.publish` and `Meteor.subscribe`. No other
+  change is necessary. The original pub/sub will be converted to a Method call
+  and the result data will be merged to Minimongo automatically.
+  `Meteor.subscribeLite` also provides a handle that reactively returns `true`
+  once data has arrived, which means existing front-end code can be kept intact!
 
-- Enhanced Methods (`Meteor.methodsEnhanced`, `Meteor.callEnhanced` and
+- **Enhanced Methods** (`Meteor.methodsEnhanced`, `Meteor.callEnhanced` and
   `Meteor.applyEnhanced`):
 
   - Automatically merge result data into Minimongo.
@@ -53,7 +53,7 @@ The _pub-sub-lite_ package aims to solve these problems by providing:
     invocation to the client-side caller and merge these changes to Minimongo,
     without using any pub/sub.
 
-- Caching layer:
+- **Caching layer**:
   - Automatically deduplicate unnecessary repeated Method calls, with
     customizable cache duration that can be set globally or individually per
     Method.
@@ -225,7 +225,7 @@ pub/sub, we would have to manually return `numberOfBooksSold` from our Method,
 and manually update this value in Minimongo. Enhanced Methods automate this
 whole process.
 
-Beside updated documents, enhanced Methods can also emit messages for inserted
+Besides updated documents, enhanced Methods can also emit messages for inserted
 and removed documents.
 
 ## Caching and Minimongo data merging
@@ -534,6 +534,10 @@ queried with native MongoDB APIs.
 - [ ] Server-side data caching: We can potentially analyze the data returned by
       `Meteor.publishLite` and `Meteor.methodsEnhanced` to perform server-side
       data caching.
+
+## Contributors
+
+- Phuc Nguyen (https://github.com/npvn)
 
 [observer-link]:
   https://galaxy-guide.meteor.com/apm-improve-cpu-and-network-usage.html#How-Observers-are-Handled-in-Meteor
