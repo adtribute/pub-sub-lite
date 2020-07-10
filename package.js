@@ -1,6 +1,6 @@
 Package.describe({
   name: "maestroqadev:pub-sub-lite",
-  version: "1.0.0",
+  version: "1.0.1",
   summary: "Lighter (Method-based) pub/sub for Meteor",
   git: "https://github.com/adtribute/pub-sub-lite",
   documentation: "README.md",
